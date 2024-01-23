@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles/Main.css">
+</head>
+<body>
+    
+    <div>
+        <h1>
+            INSERT & View comments from Database <br>
+            <span class="smaller-text"> You can UPLOAD and then view messages from db in a readble format.</span>
+        </h1>
+
+        
+        <form action="/GuestBook_GITHUB/components/process.php" method="POST">
+            <label>
+                Name
+                <input type="text" name="name" placeholder="your name"  required>
+            </label>
+
+            <label class="block mb-2">
+                Message (comment)
+                <textarea name="message" rows="8" placeholder="write your message here" required></textarea>
+            </label>
+
+            <button type="submit" >Send</button>
+        </form>
+
+        <p>
+            <a class="openBook"" href="/GuestBook_GITHUB/components/view_db.php""> Open Comments</a>
+        </p>
+    </div>
+
+    <p>
+        <a class="generateData" href="/GuestBook_GITHUB/generate_data/InsertLoop.html"> Generate data</a>
+    </p>
+
+    <a href="/index.html"> Zpět</a>
+</body>
+</html>

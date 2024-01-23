@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    padding-bottom: 42px;
+    font-size: 48px;
+}
+
+form {
+    max-width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    resize: vertical;
+    max-height: 150px;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+a {
+    color: #285ae6;
+    text-decoration: none;
+
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    padding-top: 12px;
+    text-align: center;
+    align-items: center;
+}
+
+.backToSelect {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-weight: 700;
+}
+
+.generateData {
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    font-weight: 500;
+    font-size: 14px;
+    color: gray;
+}
+
+button {
+    background-color: rgb(58, 110, 252);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    border-radius: 10px;
+    border-color: transparent;
+    padding-left: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 12px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(20, 77, 235);
+}
+
+.smaller-text {
+    font-size: 20px;
+    font-weight: 400;
+}
