@@ -84,7 +84,7 @@
             <img src="/GuestBook_GITHUB/assets/arrowIcon.png" alt="Icon" class="button-icon">
             Back to homepage
         </a>
-        <a href="/GuestBook_GITHUB/commponents/delete_all.php" class="button-link">
+        <a href="#" id="deleteAllRows" class="button-link">
             <img src="/GuestBook_GITHUB/assets/deleteIcon.png" alt="Icon" class="button-icon">
             Delete all records
         </a>
@@ -141,6 +141,28 @@
         // closes the connection with the database
         $mydb->close();
     ?>
+
+    <script>
+            document.getElementById('deleteAllRows').addEventListener('click', function(e) {
+            e.preventDefault();
+
+            fetch('delete_all.php', {
+                method: 'GET'
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                console.log('Response from delete.php:', data);
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+        });
+    </script>
 
    
 </body>
