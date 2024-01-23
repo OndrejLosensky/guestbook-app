@@ -1,4 +1,4 @@
-# [Project Name]
+# Comments-Database
 
 **Web application created in PHP that allows you to send messages (comments) and then store them in database.
 You can also access the database content and display all those comments which can be deleted by one or even all**
