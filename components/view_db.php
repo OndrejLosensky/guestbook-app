@@ -84,6 +84,10 @@
             <img src="/GuestBook_GITHUB/assets/arrowIcon.png" alt="Icon" class="button-icon">
             Back to homepage
         </a>
+        <a href="/GuestBook_GITHUB/commponents/delete_all.php" class="button-link">
+            <img src="/GuestBook_GITHUB/assets/deleteIcon.png" alt="Icon" class="button-icon">
+            Delete all records
+        </a>
     </p>
 
     
