@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comments db</title>
+    <title>Viewed database</title>
     <link rel="stylesheet" href="/GuestBook_GITHUB/styles/ViewDb.css">
     <style>
          li {
@@ -34,6 +34,21 @@
             right:5%;
         }
 
+        .button-link {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 15px; 
+            border-radius: 5px;
+        }
+
+        .button-icon {
+            width: 20px;
+            height: 20px; 
+            margin-right: 10px; 
+        }
     </style>
 </head>
 <body>
@@ -41,7 +56,10 @@
         Database with comments
     </h1>
     <p>
-        <a href="/GuestBook_GITHUB/index.html">Back to homepage</a>
+        <a href="/GuestBook_GITHUB/index.html" class="button-link">
+            <img src="/GuestBook_GITHUB/assets/arrowIcon.png" alt="Icon" class="button-icon">
+            Back to homepage
+        </a>
     </p>
 
     
