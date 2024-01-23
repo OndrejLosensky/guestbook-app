@@ -49,6 +49,30 @@
             height: 20px; 
             margin-right: 10px; 
         }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            opacity: 1;
+            padding: 20px;
+            margin: 0;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(rgba(0, 0, 0, 0.15) 1px, transparent 2px);
+            background-size: 30px 30px;
+            opacity: 0.45;
+            pointer-events: none;
+            z-index: -1; 
+        }
     </style>
 </head>
 <body>
