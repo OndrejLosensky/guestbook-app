@@ -1,7 +1,10 @@
 # Comments-Database
 
 **Web application created in PHP that allows you to send messages (comments) and then store them in database.
-You can also access the database content and display all those comments which can be deleted by one or even all**
+You can also access the database content and display all those comments which can be deleted by one or even all at once.**
+
+**Currently there is additional feature that allows you to generate random rows to the database which stores the coments. It is primarily for testing purposes
+to see how it handles and outputs the data**
 
 
 ## Installation
