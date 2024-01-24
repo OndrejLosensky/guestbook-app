@@ -3,24 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Registration</title>
+    <title>Login</title>
 </head>
 <body>
-    <h1>User Registration</h1>
-    <a href="/index.html"> Back to db selection</a>
+    <h1>Login form</h1>
     
-    <form action="/registration/register.php" method="POST">
-        <label for="username">Username:</label>
-        <input type="text" name="username" required>
-        
-        <label for="password">Password:</label>
-        <input type="password" name="password" required>
-        
-        <input type="submit" value="Register">
+    <form action="login/login.php" method="POST">
+        <!-- Your login form fields go here -->
+        <input type="text" name="name" placeholder="username">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" value="Login">
     </form>
 
-    <p>Already have an account? <a href="/login/login.php">Login here</a>.</p>
+    <p>
+        Dont have an account yet? Create it <a href="registration/register.html">here</a>
+    </p>
 
-    <p> <a href="homepage.html"> Open</a></p>
 </body>
 </html>
