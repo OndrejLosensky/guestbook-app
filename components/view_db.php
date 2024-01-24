@@ -91,7 +91,7 @@
     </h1>
     <p> There is <?php echo getCommentCount(); ?> comments in the database </p>
     <p>
-        <a href="/GuestBook_GITHUB/index.html" class="button-link">
+        <a href="../homepage.html" class="button-link">
             <img src="/GuestBook_GITHUB/assets/arrowIcon.png" alt="Icon" class="button-icon">
             Back to homepage
         </a>

@@ -24,7 +24,7 @@
     $mydb->close();
 
     // Redirect back to the guestbook form page
-    header("Location: /GuestBook_GITHUB/index.html");
+    header("Location: ../homepage.html");
     exit();
 
 ?>
