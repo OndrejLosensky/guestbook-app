@@ -44,6 +44,16 @@
             border-radius: 5px;
         }
 
+        .button-link-delete {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            background-color: #ff0000;
+            color: #fff;
+            padding: 10px 15px; 
+            border-radius: 5px;
+        }
+
         .button-icon {
             width: 20px;
             height: 20px; 
@@ -79,12 +89,13 @@
     <h1> 
         Database with comments
     </h1>
+    <p> There is <?php echo getCommentCount(); ?> comments in the database </p>
     <p>
         <a href="/GuestBook_GITHUB/index.html" class="button-link">
             <img src="/GuestBook_GITHUB/assets/arrowIcon.png" alt="Icon" class="button-icon">
             Back to homepage
         </a>
-        <a href="#" id="deleteAllRows" class="button-link">
+        <a href="#" id="deleteAllRows" class="button-link-delete">
             <img src="/GuestBook_GITHUB/assets/deleteIcon.png" alt="Icon" class="button-icon">
             Delete all records
         </a>
@@ -92,6 +103,22 @@
 
     
     <?php
+    // function that comments how many comments are there
+        function getCommentCount() {
+            $mydb = new mysqli("localhost", "root");
+            $mydb->select_db("guestbook_db");
+
+            $select = "SELECT COUNT(*) as count FROM guestbook_entrie";
+            $result = $mydb->query($select);
+
+            if ($result) {
+                $row = $result->fetch_assoc();
+                return $row['count'];
+            } else {
+                return 0;
+            }
+        }
+
         // Db connection
         $mydb = new mysqli("localhost","root");
         $mydb->select_db("guestbook_db");
@@ -124,7 +151,7 @@
                     echo "<li>
                             <strong>" . $row["name"] . ":</strong> " . $row["message"] . "
                             <span class='entry-date'>" . $row["entry_date"] . "</span>
-                            <form action='view_guestbook.php' method='POST' style='display:inline;'>
+                            <form action='view_db.php' method='POST' style='display:inline;'>
                                 <input type='hidden' name='delete_id' value='" . $row['id'] . "'>
                                 <input type='submit' value='Delete'>
                             </form>
