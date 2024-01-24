@@ -124,6 +124,10 @@
             <img src="/GuestBook_GITHUB/assets/arrowIcon.png" alt="Icon" class="button-icon">
             Back to homepage
         </a>
+        <a  class="button-link">
+            <img src="/GuestBook_GITHUB/assets/logIcon.png" alt="Icon" class="button-icon">
+            Logs
+        </a>
         <a href="#" id="deleteAllRows" class="button-link-delete">
             <img src="/GuestBook_GITHUB/assets/deleteIcon.png" alt="Icon" class="button-icon">
             Delete all records
