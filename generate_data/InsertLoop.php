@@ -86,7 +86,7 @@
 <body>
     <h1>Your data was generated</h1>
 
-    <a href="/homepage.html" class="button-link">
+    <a href="../homepage.html" class="button-link">
             <img src="/GuestBook_GITHUB/assets/arrowIcon.png" alt="Icon" class="button-icon">
             Back to main page
     </a>

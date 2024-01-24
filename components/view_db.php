@@ -64,7 +64,7 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             opacity: 1;
-            padding: 20px;
+            padding: 5px;
             margin: 0;
             padding-left: 16px;
             position: relative;
@@ -83,13 +83,42 @@
             pointer-events: none;
             z-index: -1; 
         }
+
+        .header {
+            position:absolute;
+            left: 0;
+            top:0;
+            background-color: #007bff;
+            color: white;
+            height:60px;
+            width: 100%;
+            text-align: center;
+        }
+        
+
+        h4 {
+            font-size:16px;
+            font-weight: 500;
+        }
+
+        h1 {
+            padding-top:40px;
+        }
+
+        span {
+            font-weight:800;
+        }
+
     </style>
 </head>
 <body>
+    <div class="header">
+           <h4> Welcome, {user_id} </h4> 
+    </div>
     <h1> 
         Database with comments
     </h1>
-    <p> There is <?php echo getCommentCount(); ?> comments in the database </p>
+    <p> This database has <span><?php echo getCommentCount(); ?></span> comments now </p>
     <p>
         <a href="../homepage.html" class="button-link">
             <img src="/GuestBook_GITHUB/assets/arrowIcon.png" alt="Icon" class="button-icon">
