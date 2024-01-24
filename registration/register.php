@@ -24,7 +24,7 @@
     $register->bind_param("ss", $username, $password);
 
     if ($register->execute()) {
-        echo "Registration successful. <a href='/GuestBook_GITHUB/login/login.html'>Login here</a>.";
+        echo "Registration successful. <a href='../index.html'>Login here</a>.";
 
     } else {
         echo "Error: " . $register->error;
