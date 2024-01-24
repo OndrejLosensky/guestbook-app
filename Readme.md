@@ -32,7 +32,7 @@ _You can use any of this as you want_
 
 * Link to EasyPHP: [https://www.easyphp.org/](https://www.easyphp.org/)
 * Link to MySQL: [https://www.mysql.com/](https://www.mysql.com/)
-* Link to Icons8: ["https://icons8.com/"](https://icons8.com/)
+* Link to Icons8: [https://icons8.com/](https://icons8.com/)
 
 _I haven't used any libraries or something additional yet_
 
