@@ -10,8 +10,15 @@ At first you need to register and then login via the form that pops up on the st
 It is running on EasyPHP that runs only on Windows and MySQL, but could be working everywhere else.
 
 ## Preview
-![index html - screenshot](https://github.com/OndrejLosensky/comments-db/assets/127244546/64abc365-206b-4eea-aeea-8091717e8088)
-![view_db php - screenshot](https://github.com/OndrejLosensky/comments-db/assets/127244546/1800ab1e-eb31-4577-aa80-83bf74f01f0b)
+### login form with option to also register
+![loginForm](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/d27d4546-f059-40b1-91b0-461d8fdebd3b)
+
+## Main page, where you can send the comments to the db or generate data
+![mainPage](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/cf1768da-d5db-4e85-bf93-53990879778a)
+![generateData](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/888b5d5b-8615-48f6-9f12-c8d5d096215e)
+
+## Database view
+![databaseView](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/f2726292-e9b0-4514-83ce-3c5200867f5c)
 
 ## License
 
