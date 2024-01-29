@@ -1,11 +1,9 @@
-# Comments-Database
+# Register & login database 
 
-**Web application created in PHP that allows you to send messages (comments) and then store them in database.
-You can also access the database content and display all those comments which can be deleted by one or even all at once.**
+**Welcome to the comments web database! This project is simple web-based comments section or something like a guestbook app. It is made using PHP and MySQL and assets are from Icons8.
+Users can send messages (comments) to the database and then view them, delete them row by row or all at once. There is also a feature that lets you generate data, to test the functioning of the database.**
 
-**Currently there is additional feature that allows you to generate random rows to the database which stores the coments. It is primarily for testing purposes
-to see how it handles and outputs the data**
-
+At first you need to register and then login via the form that pops up on the startpage. The registration system is secured via the **password_hash()** function to store passwords anonymously.
 
 ## Installation
 
@@ -22,11 +20,19 @@ This project is licensed under the Open Software License 3.0
 ## Authors
 
 * Ondřej Losensky
+  
+## How to Contribute:
+1. Fork the repository.
+2. Clone the forked repository to your local machine.
+3. Make your changes and test them locally.
+4. Create a pull request to contribute your changes.
 
+_You can use any of this as you want_
 ## Languages & Tools Used
 
 * Link to EasyPHP: [https://www.easyphp.org/](https://www.easyphp.org/)
 * Link to MySQL: [https://www.mysql.com/](https://www.mysql.com/)
+* Link to Icons8: [https://icons8.com/](https://icons8.com/)
 
 _I haven't used any libraries or something additional yet_
 
