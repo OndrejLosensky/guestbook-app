@@ -122,7 +122,7 @@
             <img src="/GuestBook_GITHUB/assets/arrowIcon.png" alt="Icon" class="button-icon">
             Back to login
         </a>
-        <a  class="button-link">
+        <a href="../logs/show_log.php"  class="button-link">
             <img src="/GuestBook_GITHUB/assets/logIcon.png" alt="Icon" class="button-icon">
             Logs
         </a>
