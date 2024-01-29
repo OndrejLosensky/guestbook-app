@@ -120,13 +120,21 @@
     </h1>
     <p> This database has <span><?php echo getCommentCount(); ?></span> comments now </p>
     <p>
-        <a href="../homepage.html" class="button-link">
+        <a href="../index.html" class="button-link">
             <img src="/GuestBook_GITHUB/assets/arrowIcon.png" alt="Icon" class="button-icon">
-            Back to homepage
+            Back to login
         </a>
         <a  class="button-link">
             <img src="/GuestBook_GITHUB/assets/logIcon.png" alt="Icon" class="button-icon">
             Logs
+        </a>
+        <a href="../homepage.html"  class="button-link">
+            <img src="/GuestBook_GITHUB/assets/sendIcon.png" alt="Icon" class="button-icon">
+            Insert comment
+        </a>
+        <a href="../generate_data/InsertLoop.html"  class="button-link">
+            <img src="/GuestBook_GITHUB/assets/generateIcon.png" alt="Icon" class="button-icon">
+            Generate data
         </a>
         <a href="#" id="deleteAllRows" class="button-link-delete">
             <img src="/GuestBook_GITHUB/assets/deleteIcon.png" alt="Icon" class="button-icon">
