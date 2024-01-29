@@ -52,7 +52,7 @@ _I haven't used any libraries or something additional yet_
 ## Project Creation Date
 
 * Created on: 22.1.2024
-* Version: 1.1.2
+* Version: 1.2.1
 
 
 
