@@ -112,9 +112,7 @@
     </style>
 </head>
 <body>
-    <div class="header">
-           <h4> Welcome, {user_id} </h4> 
-    </div>
+    
     <h1> 
         Database with comments
     </h1>
@@ -144,6 +142,8 @@
 
     
     <?php
+    include 'get_username.php';
+    session_start();
     // function that comments how many comments are there
         function getCommentCount() {
             $mydb = new mysqli("localhost", "root");
@@ -159,6 +159,10 @@
                 return 0;
             }
         }
+
+        echo "<div class='header'>
+           <h4> Welcome, " . getUserName() . "</h4> 
+        </div>";
 
         // Db connection
         $mydb = new mysqli("localhost","root");
