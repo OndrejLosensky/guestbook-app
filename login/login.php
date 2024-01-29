@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Authentication successful
             $_SESSION["user_id"] = $user_data["id"];
             $_SESSION["name"] = $user_data["name"];
-            header("Location: ../homepage.html");
+            header("Location: ../components/view_db.php");
             exit();
         } else {
             // Authentication failed

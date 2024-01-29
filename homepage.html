@@ -5,13 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link rel="stylesheet" href="styles/Main.css">
+    <style>
+        .button-link {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 15px; 
+            border-radius: 5px;
+        }
+
+        .button-icon {
+            width: 20px;
+            height: 20px; 
+            margin-right: 10px; 
+        }
+   
+    </style>
 </head>
 <body>
     
     <div>
         <h1>
             INSERT & View comments from Database <br>
-            <span class="smaller-text"> You can UPLOAD and then view messages from db in a readble format.</span>
+            <span class="smaller-text"> You can UPLOAD the messages from here to the database</span>
         </h1>
 
         
@@ -30,16 +48,14 @@
         </form>
 
         <p>
-            <a class="openBook"" href="/GuestBook_GITHUB/components/view_db.php""> Open Comments</a>
+            <a class="button-link" href="/GuestBook_GITHUB/components/view_db.php">
+                 <img src="/GuestBook_GITHUB/assets/arrowIcon.png" alt="Icon" class="button-icon">
+                Back to main page
+            </a>
             <br>
-            <br>
-            <a class="generateData" href="/GuestBook_GITHUB/generate_data/InsertLoop.html"> Generate data</a>
         </p>
     </div>
 
-    <p>
-        <a href="/GuestBook_GITHUB/index.html"> Back to login</a>
-    </p>
 
 </body>
 </html>
