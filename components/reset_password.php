@@ -1,5 +1,3 @@
 <?php
-
-    echo "This feature is not available right now";
-
+    echo "This feature is unavailable right now";
 ?>
