@@ -118,10 +118,6 @@
     </h1>
     <p> This database has <span><?php echo getCommentCount(); ?></span> comments now </p>
     <p>
-        <a href="#" onclick="confirmLogout()" class="button-link">
-            <img src="/GuestBook_GITHUB/assets/arrowIcon.png" alt="Icon" class="button-icon">
-            Back to login
-        </a>
         <a href="../logs/show_log.php"  class="button-link">
             <img src="/GuestBook_GITHUB/assets/logIcon.png" alt="Icon" class="button-icon">
             Logs
@@ -142,8 +138,9 @@
 
     
     <?php
-    include 'get_username.php';
     session_start();
+    include 'get_username.php';
+
     // function that comments how many comments are there
         function getCommentCount() {
             $mydb = new mysqli("localhost", "root");
@@ -160,9 +157,9 @@
             }
         }
 
-        echo "<div class='header'>
-           <h4> Welcome, " . getUserName() . "</h4> 
-        </div>";
+        echo "<div class='header'>";
+        getUserName();
+        echo "</div>";
 
         // Db connection
         $mydb = new mysqli("localhost","root");
