@@ -13,12 +13,18 @@ It is running on EasyPHP that runs only on Windows and MySQL, but could be worki
 ### login form with option to also register
 ![loginForm](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/d27d4546-f059-40b1-91b0-461d8fdebd3b)
 
-## Main page, where you can send the comments to the db or generate data
-![mainPage](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/cf1768da-d5db-4e85-bf93-53990879778a)
-![generateData](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/888b5d5b-8615-48f6-9f12-c8d5d096215e)
 
-## Database view
-![databaseView](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/f2726292-e9b0-4514-83ce-3c5200867f5c)
+### Homepage
+![mainPage](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/d4f2739b-a8da-43eb-a1aa-beec1b61068d)
+
+### Insert comments into database
+![databaseView](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/e86ce012-9dee-462f-ae58-85efdb362375)
+
+### Generate data
+![generateData](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/e1185600-eea3-4040-8f5f-a7aa9496d05d)
+
+### History of logs
+![history_logs](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/c7ce226b-5ebf-4267-93ae-933b625402ea)
 
 ## License
 
@@ -46,7 +52,7 @@ _I haven't used any libraries or something additional yet_
 ## Project Creation Date
 
 * Created on: 22.1.2024
-* Version: 1.1.2
+* Version: 1.2.1
 
 
 
