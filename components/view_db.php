@@ -122,6 +122,10 @@
             <img src="/GuestBook_GITHUB/assets/logIcon.png" alt="Icon" class="button-icon">
             Logs
         </a>
+        <a href="../logs/show_users.php"  class="button-link">
+            <img src="/GuestBook_GITHUB/assets/usersIcon.png" alt="Icon" class="button-icon">
+            Users
+        </a>
         <a href="../homepage.html"  class="button-link">
             <img src="/GuestBook_GITHUB/assets/sendIcon.png" alt="Icon" class="button-icon">
             Insert comment
