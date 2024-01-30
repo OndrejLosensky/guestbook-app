@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Form</title>
     <link rel="stylesheet" href="registerStyle.css">
+    <script src="../components/show_password.js"></script>
     <style>
         input[type="submit"]{
             border: 0px solid whitesmoke;
@@ -46,17 +47,6 @@
     <p>
         <a href="../index.html">Back to Login</a>
     </p>
-
-    <script>
-        function togglePassword() {
-            var passwordField = document.getElementById("password");
-            if (passwordField.type === "password") {
-                passwordField.type = "text";
-            } else {
-                passwordField.type = "password";
-            }
-        }
-    </script>
 
 </body>
 </html>
