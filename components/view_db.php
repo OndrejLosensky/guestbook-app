@@ -118,7 +118,7 @@
     </h1>
     <p> This database has <span><?php echo getCommentCount(); ?></span> comments now </p>
     <p>
-        <a href="../index.html" class="button-link">
+        <a href="#" onclick="confirmLogout()" class="button-link">
             <img src="/GuestBook_GITHUB/assets/arrowIcon.png" alt="Icon" class="button-icon">
             Back to login
         </a>
@@ -234,6 +234,16 @@
                 console.error('There was a problem with the fetch operation:', error);
             });
         });
+
+
+        function confirmLogout() {
+            console.log("logging out!");
+            var logoutConfirmed = confirm("Are you sure you want to log out?");
+            if (logoutConfirmed) {
+                window.location.href = '/GuestBook_GITHUB/components/log_out.php';
+            }
+        }
+
     </script>
 
    
