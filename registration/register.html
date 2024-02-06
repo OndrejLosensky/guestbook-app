@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Form</title>
     <link rel="stylesheet" href="registerStyle.css">
+    <script src="../components/password_length_check.js"></script>
     <script src="../components/show_password.js"></script>
     <style>
         input[type="submit"]{
@@ -31,7 +32,7 @@
 </head>
 <body>
     <h1>Register Form</h1>
-    <form action="register.php" method="POST">
+    <form action="register.php" method="POST" onsubmit="return validateForm()">
         <!-- Your registration form fields go here -->
         <input type="text" name="name" placeholder="Username">
         <input type="email" name="email" placeholder="Email address" required>
