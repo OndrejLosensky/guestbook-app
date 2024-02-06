@@ -2,20 +2,29 @@
 
 **Welcome to the comments web database! This project is simple web-based comments section or something like a guestbook app. It is made using PHP and MySQL and assets are from Icons8.
 Users can send messages (comments) to the database and then view them, delete them row by row or all at once. There is also a feature that lets you generate data, to test the functioning of the database.**
-
 At first you need to register and then login via the form that pops up on the startpage. The registration system is secured via the **password_hash()** function to store passwords anonymously.
+
+## Features
+* login & register
+* password reset option
+* Send messages to the database from Form
+* retrieve the data
+* show logs, all users
+* delete comments
+* generate random data for testing
 
 ## Installation
 
 It is running on EasyPHP that runs only on Windows and MySQL, but could be working everywhere else.
 
 ## Preview
-### login form with option to also register
-![loginForm](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/d27d4546-f059-40b1-91b0-461d8fdebd3b)
+### Login and register form
+![loginForm](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/7233b7ec-d29f-41ed-be91-4bfa0802d18d)
+![registerForm](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/d78fd62c-1bc6-48db-908d-7018b0a31e9a)
 
 
 ### Homepage
-![mainPage](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/d4f2739b-a8da-43eb-a1aa-beec1b61068d)
+![mainPage](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/63bb807c-7d17-4bd2-bda7-acdddca0105c)
 
 ### Insert comments into database
 ![databaseView](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/e86ce012-9dee-462f-ae58-85efdb362375)
@@ -52,7 +61,7 @@ _I haven't used any libraries or something additional yet_
 ## Project Creation Date
 
 * Created on: 22.1.2024
-* Version: 1.2.1
+* Version: 1.3.3
 
 
 
