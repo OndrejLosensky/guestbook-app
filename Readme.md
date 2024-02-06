@@ -2,7 +2,7 @@
 
 **Welcome to the comments web database! This project is simple web-based comments section or something like a guestbook app. It is made using PHP and MySQL and assets are from Icons8.
 Users can send messages (comments) to the database and then view them, delete them row by row or all at once. There is also a feature that lets you generate data, to test the functioning of the database.**
-At first you need to register and then login via the form that pops up on the startpage. The registration system is secured via the **password_hash()** function to store passwords anonymously.
+At first you need to register and then login via the form that pops up on the startpage. The registration system is secured via the **password_hash()** function to store passwords anonymously.Password now needs to be atleast 8 characters long
 
 ## Features
 * login & register
@@ -12,6 +12,8 @@ At first you need to register and then login via the form that pops up on the st
 * show logs, all users
 * delete comments
 * generate random data for testing
+* password length mininum of 8 chars
+* **admin/user** sections
 
 ## Installation
 
@@ -23,8 +25,12 @@ It is running on EasyPHP that runs only on Windows and MySQL, but could be worki
 ![registerForm](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/d78fd62c-1bc6-48db-908d-7018b0a31e9a)
 
 
-### Homepage
-![mainPage](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/63bb807c-7d17-4bd2-bda7-acdddca0105c)
+### Homepage for users
+![Snímek obrazovky 2024-02-06 123029](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/0a6da566-7e5f-464c-b4fa-3a5f84867a10)
+
+### Homepage for admin
+![Snímek obrazovky 2024-02-06 122959](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/57bd4cd5-fe29-43aa-ab60-47c4454d9cfb)
+
 
 ### Insert comments into database
 ![databaseView](https://github.com/OndrejLosensky/guestbook-app/assets/127244546/e86ce012-9dee-462f-ae58-85efdb362375)
@@ -61,7 +67,7 @@ _I haven't used any libraries or something additional yet_
 ## Project Creation Date
 
 * Created on: 22.1.2024
-* Version: 1.3.3
+* Version: 1.3.5
 
 
 
