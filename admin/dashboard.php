@@ -31,7 +31,7 @@
             color: #888;
             position: absolute;
             top:35%;
-            right:1%;
+            right:5%;
         }
 
         .button-link {
@@ -112,19 +112,35 @@
     </style>
 </head>
 <body>
-    
+
     <p> This database has <span><?php echo getCommentCount(); ?></span> comments now </p>
     <p>
+        <a href="../logs/show_log.php"  class="button-link">
+            <img src="/GuestBook_GITHUB/assets/logIcon.png" alt="Icon" class="button-icon">
+            Logs
+        </a>
+        <a href="../logs/show_users.php"  class="button-link">
+            <img src="/GuestBook_GITHUB/assets/usersIcon.png" alt="Icon" class="button-icon">
+            Users
+        </a>
         <a href="../homepage.html"  class="button-link">
             <img src="/GuestBook_GITHUB/assets/sendIcon.png" alt="Icon" class="button-icon">
             Insert comment
+        </a>
+        <a href="../generate_data/InsertLoop.html"  class="button-link">
+            <img src="/GuestBook_GITHUB/assets/generateIcon.png" alt="Icon" class="button-icon">
+            Generate data
+        </a>
+        <a href="#" id="deleteAllRows" class="button-link-delete">
+            <img src="/GuestBook_GITHUB/assets/deleteIcon.png" alt="Icon" class="button-icon">
+            Delete all records
         </a>
     </p>
 
     
     <?php
     session_start();
-    include 'get_username.php';
+    include '../components/get_username.php';
 
     // function that comments how many comments are there
         function getCommentCount() {
@@ -155,7 +171,6 @@
             die("Connection failed: " . $mydb->connect_error);
         }
 
-        /*
         if (isset($_POST['delete_id'])) {
             $delete_id = $_POST['delete_id'];
             $command_delete = "DELETE FROM guestbook_entrie WHERE id = $delete_id";
@@ -168,7 +183,6 @@
                 echo "Ooops, there was an error: " . $mydb->error;
             }
         }
-        */
 
         $command_select = "SELECT * FROM guestbook_entrie ORDER BY entry_date DESC";
         $result = $mydb->query($command_select);
@@ -180,7 +194,10 @@
                     echo "<li>
                             (" . $row["role"] . ") <strong>" . $row["name"] . ":</strong> " . $row["message"] . "
                             <span class='entry-date'>" . $row["entry_date"] . "</span>
-                            
+                            <form action='view_db.php' method='POST' style='display:inline;'>
+                                <input type='hidden' name='delete_id' value='" . $row['id'] . "'>
+                                <input type='submit' value='Delete'>
+                            </form>
                         </li>";
                 }
                 echo "</ul>";
@@ -196,6 +213,27 @@
     ?>
 
     <script>
+            document.getElementById('deleteAllRows').addEventListener('click', function(e) {
+            e.preventDefault();
+
+            fetch('../components/delete_all.php', {
+                method: 'GET'
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                console.log('Response from delete.php:', data);
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+        });
+
+
         function confirmLogout() {
             console.log("logging out!");
             var logoutConfirmed = confirm("Are you sure you want to log out?");

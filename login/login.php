@@ -15,31 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 
     // Retrieve user data from the database
-    $select_user = $auth_db->prepare("SELECT id, name, password FROM users WHERE name = ?");
+    $select_user = $auth_db->prepare("SELECT id, name, password, role FROM users WHERE name = ?");
     $select_user->bind_param("s", $username);
     $select_user->execute();
     $result = $select_user->get_result();
-
-    // logs the data to another table
-    function logLogin($username, $status) {
-        $mydb = new mysqli("localhost", "root");
-        $mydb->select_db("guestbook_db");
-
-        if ($mydb->connect_error) {
-            die("Connection failed: " . $mydb->connect_error);
-        }
-    
-        $query = "INSERT INTO login_logs (name, status) VALUES ('$username', '$status')";
-        
-        if ($mydb->query($query) === TRUE) {
-            echo "Login logged successfully";
-        } else {
-            echo "Error: " . $query . "<br>" . $mydb->error;
-        }
-    
-        $mydb->close();
-    }
-
 
     if ($result->num_rows > 0) {
         $user_data = $result->fetch_assoc();
@@ -49,21 +28,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Authentication successful
             $_SESSION["user_id"] = $user_data["id"];
             $_SESSION["name"] = $user_data["name"];
-            logLogin($user_data["name"], 'Success');
-            header("Location: ../components/view_db.php");
-            exit();
+            $_SESSION["role"] = $user_data["role"];
+
+            // Check if the user is an admin
+            if ($_SESSION["role"] === "admin") {
+                // admin login
+                header("Location: ../admin/dashboard.php");
+                exit();
+            } else {
+                // Regular user login
+                header("Location: ../components/view_db.php");
+                exit();
+            }
         } else {
             // Authentication failed
-            logLogin($username, 'Failure');
             echo "Invalid username or password.";
         }
     } else {
         // User not found
-        logLogin($username, 'Failure');
         echo "Invalid username or password.";
     }
 
-    // Close the connection
+    // Close connections
     $select_user->close();
     $auth_db->close();
 }
